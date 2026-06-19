@@ -1,0 +1,17 @@
+{
+  "name": "Prompt Forge",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "bash .devcontainer/start.sh",
+  "forwardPorts": [5173, 4000],
+  "portsAttributes": {
+    "5173": {
+      "label": "Prompt Forge",
+      "onAutoForward": "openPreview"
+    },
+    "4000": {
+      "label": "Prompt Forge API",
+      "onAutoForward": "silent"
+    }
+  }
+}
